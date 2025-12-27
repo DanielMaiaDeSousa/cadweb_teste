@@ -39,9 +39,10 @@ def form_categoria(request):
     if request.method == 'POST':
         form = CategoriaForm(request.POST)
         if form.is_valid():
-            form.save() # Guarda no banco de dados
-            return redirect('categoria') # Redireciona para a lista
+            form.save() # Salva no banco de dados Neon
+            return redirect('categoria') # Redireciona para a listagem
     else:
         form = CategoriaForm()
-
-    return render(request, 'categoria/formulario.html', {'form': form})
+    
+    contexto = {'form': form}
+    return render(request, 'categoria/formulario.html', contexto)
