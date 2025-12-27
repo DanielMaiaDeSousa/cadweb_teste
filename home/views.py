@@ -32,3 +32,16 @@ def form_categoria(request):
     }
     return render(request, 'categoria/formulario.html', contexto)
 
+from django.shortcuts import render, redirect
+from .forms import CategoriaForm
+
+def form_categoria(request):
+    if request.method == 'POST':
+        form = CategoriaForm(request.POST)
+        if form.is_valid():
+            form.save() # Guarda no banco de dados
+            return redirect('categoria') # Redireciona para a lista
+    else:
+        form = CategoriaForm()
+
+    return render(request, 'categoria/formulario.html', {'form': form})
