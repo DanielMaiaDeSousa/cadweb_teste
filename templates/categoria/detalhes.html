@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block titulo_conteudo %} Detalhes da Categoria {% endblock %}
+
+{% block conteudo %}
+<div class="fieldset p-3 border rounded">
+    <p><strong>ID:</strong> {{ item.id }}</p>
+    <p><strong>Nome:</strong> {{ item.nome }}</p>
+    <p><strong>Ordem:</strong> {{ item.ordem }}</p>
+</div>
+<button onclick="location.href='{% url 'categoria' %}'" class="btn btn-secondary mt-3">Voltar</button>
+{% endblock %}
