@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-t_-cl2580se4quu7kbgb3pfsgmvx_966^1xby%l8_2bwfgjf9&
 DEBUG = True  
 ALLOWED_HOSTS = ['localhost','127.0.0.1', '.vercel.app', '.app.github.dev']
 # No arquivo pweb/settings.py
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.app.github.dev']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.app.github.dev', 'cadweb-teste.vercel.app']
 CSRF_TRUSTED_ORIGINS = [
     'https://supreme-sniffle-7vw5jp5v495xcgpq.github.dev',
     'https://localhost:8080',
