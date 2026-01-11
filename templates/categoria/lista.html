@@ -32,7 +32,7 @@
             <td> {{item.nome}} </td>
             <td> {{item.ordem}} </td>
             <td> 
-                <button onclick="location.href='{% url "categoria" %}'" class="btn btn-primary">Recarregar</button>
+                <button onclick="location.href='{% url 'categoria' %}'" class="btn btn-primary">Recarregar</button>
                 <button onclick="location.href='{% url 'detalhes_categoria' item.id %}'" class="btn btn-info">Detalhes</button>
                 <button onclick="location.href='{% url 'editar_categoria' item.id %}'" class="btn btn-warning">Alterar</button>
                 <a href="{% url 'remover_categoria' item.id %}" class="btn btn-danger" 
