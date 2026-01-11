@@ -33,3 +33,16 @@ def editar_categoria(request, id):
         form = CategoriaForm(instance=categoria)
     
     return render(request, 'categoria/formulario.html', {'form': form})
+
+# View de Criação
+def form_categoria(request):
+    if request.method == 'POST':
+        form = CategoriaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Categoria criada com sucesso!')
+            return redirect('categoria')
+    else:
+        form = CategoriaForm()
+
+    return render(request, 'categoria/formulario.html', {'form': form})
