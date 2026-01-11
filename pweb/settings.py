@@ -30,11 +30,8 @@ ALLOWED_HOSTS = ['localhost','127.0.0.1', '.vercel.app', '.app.github.dev']
 # No arquivo pweb/settings.py
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.app.github.dev']
 CSRF_TRUSTED_ORIGINS = [
-    'https://supreme-sniffle-7vw5jp5v495xcgpq-8000.app.github.dev'
+    'https://supreme-sniffle-7vw5jp5v495xcgpq.github.dev',
 ]
-
-# Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
