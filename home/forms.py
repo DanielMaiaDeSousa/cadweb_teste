@@ -3,7 +3,7 @@ from .models import Categoria
 
 class CategoriaForm(forms.ModelForm):
     class Meta:
-        model = Categoria
+        model = Categoria # Esta linha vincula o form ao banco de dados
         fields = ['nome', 'ordem']
         widgets = {
             'nome': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nome'}),
