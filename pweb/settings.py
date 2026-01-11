@@ -14,6 +14,8 @@ from pathlib import Path
 
 import dj_database_url
 
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -31,6 +33,7 @@ ALLOWED_HOSTS = ['localhost','127.0.0.1', '.vercel.app', '.app.github.dev']
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.app.github.dev']
 CSRF_TRUSTED_ORIGINS = [
     'https://supreme-sniffle-7vw5jp5v495xcgpq.github.dev',
+    'https://localhost:8080',
 ]
 INSTALLED_APPS = [
     'django.contrib.admin',
